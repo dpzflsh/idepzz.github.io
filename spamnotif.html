@@ -198,17 +198,8 @@ function submitSpam() {
   if (validateForm()) {
     var phoneNumber = document.getElementById("phoneNumber").value;
     var apiLink = `https://api-bruxiintk.online/api/subirnoti?apikey=devs30&numero=${phoneNumber}`;
-    fetch(apiLink)
-      .then(response => {
-        if (response.ok) {
-          window.location.href = apiLink;
-        } else {
-          throw new Error("Terjadi kesalahan saat mengirimkan spam.");
-        }
-      })
-      .catch(error => {
-        alert(error.message);
-      });
+    
+    window.location.href = apiLink;
   }
 }
 </script>
